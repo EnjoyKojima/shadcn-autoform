@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { DependencyType } from '@/components/ui/auto-form/interface'
+import { useToast } from '@/components/ui/toast/use-toast'
 import * as z from 'zod'
+
+const { toast } = useToast()
 
 const schema = z.object({
   age: z.number(),
@@ -19,6 +22,7 @@ function onSubmit(values: Record<string, any>) {
 
 <template>
   <div class="p-10">
+    <Toaster />
     <AutoForm
       class="w-2/3 space-y-6"
       :schema="schema"
