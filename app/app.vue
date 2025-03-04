@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { DependencyType } from '@/components/ui/auto-form/interface'
-import { h } from 'vue'
 import * as z from 'zod'
 
 const schema = z.object({
